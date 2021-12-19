@@ -148,5 +148,4 @@ function formValidationCheck(event) {
         formErorMessage.style.backgroundColor = 'green'
     }
 }
-
 submitPlan.addEventListener('click', formValidationCheck)
