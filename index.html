@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/fonts.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+        href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic"
+        rel="stylesheet" />
+</head>
+
+<body>
+    <div id="pre-load">
+        <p id="loading"><span>Loading...</span></p>
+    </div>
+    <main>
+        <section>
+            <div class="permium-buy">
+                <div class="plans">
+                    <div class="select-plans bronze">
+                        <h3>اشتراک برنزی</h3>
+                        <p>ماهیانه 10 هزار تومان</p>
+                        <img src="/images/bronze.png" alt="Bronze Plan Icon">
+
+                        <div class="plans-future">
+                            <h4>امکانات پلن برنزی</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i>دانلود فیلم ها و سریال ها</li>
+                                <li><i class="far fa-times-circle"></i>قابلیت تماشای آنلاین</li>
+                                <li><i class="far fa-times-circle"></i>درخواست فیلم و سریال</li>
+                                <li><i class="far fa-times-circle"></i>قابلیت لیست دانلود</li>
+                            </ul>
+                        </div>
+                        <button id="plan-bronze">خرید پلن برنزی</button>
+                    </div>
+
+                    <div class="select-plans gold">
+                        <h3>اشتراک طلایی</h3>
+                        <p>ماهیانه 25 هزار تومان</p>
+                        <img src="/images/gold.png" alt="Gold Plan Icon">
+                        <div class="plans-future">
+                            <h4>امکانات پلن طلایی</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i>دانلود فیلم ها و سریال ها</li>
+                                <li><i class="fas fa-check-circle"></i>قابلیت تماشای آنلاین</li>
+                                <li><i class="fas fa-check-circle"></i>درخواست فیلم و سریال</li>
+                                <li><i class="fas fa-check-circle"></i>قابلیت لیست دانلود</li>
+                            </ul>
+                        </div>
+                        <button id="plan-gold">خرید پلن طلایی</button>
+                    </div>
+
+                    <div class="select-plans silver">
+                        <h3>اشتراک نقره ای</h3>
+                        <p>ماهیانه 18 هزار تومان</p>
+                        <img src="/images/silver.png" alt="Silver Plan Icon">
+                        <div class="plans-future">
+                            <h4>امکانات پلن نقره ای</h4>
+                            <ul>
+                                <li><i class="fas fa-check-circle"></i>دانلود فیلم ها و سریال ها</li>
+                                <li><i class="fas fa-check-circle"></i>قابلیت تماشای آنلاین</li>
+                                <li><i class="fas fa-check-circle"></i>درخواست فیلم و سریال</li>
+                                <li><i class="far fa-times-circle"></i>قابلیت لیست دانلود</li>
+                            </ul>
+                        </div>
+                        <button id="plan-silver">خرید پلن نقره ای</button>
+                    </div>
+                </div>
+
+                <div class="pay-info">
+                    <div class="months-father">
+                        <label for="select-months">تعداد ماه:</label><br>
+                        <select id="select-months">
+                            <option value="default" selected disabled hidden>انتخاب کنید</option>
+                            <option value="1">یکماهه</option>
+                            <option value="3">سه ماهه</option>
+                            <option value="6">شیش ماهه</option>
+                            <option value="12">یکساله</option>
+                        </select>
+                    </div>
+                    <p class="your-plan">اطلاعات پرداخت: <span id="price-plan-name">    --    </span></p>
+                    <p class="total-amount">مبلغ قابل پرداخت: <span id="price-selected">    --    </span></p>
+                    
+                    <form class="pay">
+                        <label for="email">ایمیل</label>
+                        <input type="email" id="email" placeholder="YourEmail@gmail.com">
+                        <label for="tel">موبایل</label>
+                        <input type="tel" id="tel" placeholder="شماره موبایل">
+                        <input type="submit" id="submit-plan" value="پرداخت">
+                    </form>
+                    <div id="form-eror">
+                       <p id="form-eror-message"></p>
+                    </div>
+                </div>
+        </section>
+    </main>
+    <script src="/script/script.js"></script>
+</body>
+
+</html>

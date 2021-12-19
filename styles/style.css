@@ -1,0 +1,358 @@
+/* HTML Default Styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: iransans;
+    direction: rtl;
+}
+
+/* Body Styles */
+
+body {
+    background-image: url(/images/background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.315);
+}
+
+/* Class Styles */
+section {
+    display: flex;
+    justify-content: center;
+}
+
+#pre-load {
+    background-color: cadetblue;
+    width: 100%;
+    height: 100vh;
+    z-index: 10;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#loading {
+
+    text-align: center;
+    height: auto;
+    border-right: 4px solid black;
+    overflow: hidden;
+    direction: ltr;
+    font-family: poppins;
+    font-weight: bold;
+    font-size: 40px;
+    animation: loading 3s;
+    animation-iteration-count: 1;
+
+}
+
+.hidden {
+    animation: fadeout 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeout {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+@keyframes loading {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 205px;
+    }
+}
+
+#loading span {
+    font: inherit;
+    animation: pulse 1s alternate infinite;
+}
+
+@keyframes pulse {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.permium-buy {
+    width: 750px;
+    background-color: rgba(228, 228, 228, 0.452);
+    backdrop-filter: blur(3px);
+    border-radius: 10px;
+    margin: 50px 0;
+
+}
+
+.plans {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px 0;
+}
+
+.select-plans {
+    width: 200px;
+    border-radius: 8px;
+    position: relative;
+    padding: 5px 10px;
+}
+
+.select-plans img {
+    position: absolute;
+    width: 74px;
+    top: -10px;
+    left: -10px;
+}
+
+.select-plans h3 {
+    font-size: 22px;
+    opacity: 0.9;
+    font-weight: 700;
+}
+
+.select-plans p {
+    font-size: 14px;
+    font-weight: 700;
+    opacity: 0.6;
+}
+
+.plans-future {
+    font-size: 15px;
+    margin-top: 20px;
+}
+
+.plans-future h4 {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.plans-future ul li {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 3px 0;
+    opacity: 0.8;
+}
+
+.plans-future ul li:not(:last-child) {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.212);
+}
+
+.fa-check-circle,
+.fa-times-circle {
+    font-size: 18px;
+    margin-left: 5px;
+}
+
+.fa-check-circle {
+    color: rgb(5, 146, 12);
+}
+
+.fa-times-circle {
+    color: rgb(214, 1, 1);
+}
+
+.silver {
+    background-color: hsla(0, 0%, 75%, 0.7);
+    transform: scale(1.05);
+
+}
+
+.gold {
+    background-color: hsla(51, 98%, 57%, 0.7);
+    transform: scale(1.1);
+
+}
+
+.bronze {
+    background-color: rgba(205, 128, 50, 0.7);
+
+}
+
+.select-plans button {
+    background-color: rgba(24, 161, 6, 0.856);
+    color: rgb(255, 255, 255);
+    display: block;
+    border: 0;
+    font-size: 14px;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 3px 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.select-plans button:hover {
+    transform: scale(1.05);
+}
+
+
+/* pay information  */
+
+
+.pay-info {
+    padding: 15px 15px;
+    background-color: rgba(255, 255, 255, 0.808);
+    width: 95%;
+    margin: auto;
+    margin-bottom: 40px;
+    border-radius: 8px;
+    display: none;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    align-self: flex-start;
+    grid-gap: 10px;
+}
+
+.pay-info p,
+.pay-info label {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 5px;
+    outline: none;
+}
+#select-months {
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.082);
+    padding: 5px;
+    outline: none;
+    border: none;
+}
+
+#select-months:focus {
+    background-color: #ffffff;
+}
+#price-plan-name,
+#price-selected {
+    font-size: 14px;
+}
+
+.pay-info .your-plan {
+    grid-column: 2/4;
+    grid-row: 1/3;
+    width: 280px;
+}
+
+.pay-info .total-amount {
+    grid-column: 4/6;
+    grid-row: 1/3;
+}
+.months-father {
+    grid-column: 1/2;
+    grid-row: 1/3;
+}
+.pay {
+    display: grid;
+    grid-row: 3/6;
+    grid-column: 1/6;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+
+}
+.pay input:not([type="submit"]) {
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    height: 35px;
+    margin-right: 10px;
+    padding: 0 10px;
+    font-size: 16px;
+    background-color: rgba(0, 0, 0, 0.082);
+}
+.pay input:not([type="submit"]):focus {
+    background-color: #ffffff;
+}
+.pay label {
+    font-size: 16px;
+}
+.pay label[for="email"] {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    align-self: flex-end;
+    margin-right: 10px;
+}
+
+.pay input[type="email"] {
+    grid-column: 1/2;
+    grid-row: 2/4;
+    align-self: center;
+    direction: ltr;
+}
+
+.pay label[for="tel"] {
+    grid-column: 2/4;
+    grid-row: 1/1;
+    align-self: flex-end;
+    margin-right: 10px;
+
+}
+.pay input[type="tel"] {
+    grid-column: 2/3;
+    grid-row: 2/4;
+    align-self: center;
+}
+
+.pay input[type="submit"] {
+    grid-column: 3/4;
+    grid-row: 2/4;
+    align-self: center;
+    width: 100px;
+    height: 35px;
+    font-weight: bold;
+    font-size: 16px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    margin: auto;
+    background-color: rgb(18, 175, 18);
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.1s;
+}
+
+.pay input[type="submit"]:active {
+    transform: scale(0.9);
+}
+.pay input[type="submit"]:hover {
+    color: rgb(219, 219, 219);
+}
+.pay-info p span {
+    font-weight: 400;
+    font-size: 15px;
+}
+.pay input::placeholder {
+    font-size: 14px;
+    font-weight: 400;
+}
+#form-eror {
+    grid-column: 1/6;
+    grid-row: 6/7;
+    display: none;
+}
+
+#form-eror-message{
+    font-size: 16px;
+    font-weight: 400;
+    background-color: rgba(247, 36, 21, 0.829);
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+}
