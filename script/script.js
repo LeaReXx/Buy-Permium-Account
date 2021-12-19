@@ -44,6 +44,17 @@ function userSelectMonths(event) {
 }
 
 months.addEventListener('change', userSelectMonths)
+
+function selectedMonthsCheck() {
+    if(months.value != 'default') {
+        months.style.border = 'none'
+    } else {
+        months.style.border = '1px solid red'
+    }
+}
+months.addEventListener('blur', selectedMonthsCheck)
+
+
 let permiumName;
 let priceAllPlans;
 
@@ -115,9 +126,7 @@ function formValidationCheck(event) {
         
     } else if (months.value === 'default') {
         formEror.style.display = 'block'
-        months.style.border = '1px solid red'
         formErorMessage.innerHTML = `تعداد ماه ${permiumName} خود را انتخاب کنید`
-
     } else if (emailInput.value === '') {
         formEror.style.display = 'block'
         formErorMessage.innerHTML = 'لطفا آدرس ایمیل را به درستی وارد کنید'
@@ -131,7 +140,6 @@ function formValidationCheck(event) {
             formEror.style.display = 'block'
             formErorMessage.innerHTML = 'درحال انتقال به درگاه پرداخت...'
             formErorMessage.style.backgroundColor = 'green'
-        
     }
 }
 
