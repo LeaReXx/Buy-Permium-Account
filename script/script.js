@@ -1,3 +1,4 @@
+// Call from HTML
 var $ = document
 let bodyElem = document.body;
 let preLoad = $.getElementById('pre-load');
@@ -15,6 +16,7 @@ let formErorMessage = $.getElementById('form-eror-message');
 let payInfoBox = $.querySelector('.pay-info');
 months.disabled = true
 
+// Permium Plans Array
 let plans = {
     gold: {
         Name: 'Permium Gold',
@@ -30,12 +32,13 @@ let plans = {
     }
 }
 
-
+// Preload Function
 function pagePreLoad() {
     preLoad.classList.add('hidden')
 }
 window.addEventListener('load', pagePreLoad)
 
+//Calculates the price of the product based on the number of months 
 
 function userSelectMonths(event) {
 
@@ -46,7 +49,7 @@ function userSelectMonths(event) {
 months.addEventListener('change', userSelectMonths)
 
 function selectedMonthsCheck() {
-    if(months.value != 'default') {
+    if (months.value != 'default') {
         months.style.border = 'none'
     } else {
         months.style.border = '1px solid red'
@@ -54,7 +57,7 @@ function selectedMonthsCheck() {
 }
 months.addEventListener('blur', selectedMonthsCheck)
 
-
+// Premium plans functions , actions click
 let permiumName;
 let priceAllPlans;
 
@@ -97,7 +100,7 @@ function bronzeFunc() {
 bronzePlan.addEventListener('click', bronzeFunc)
 
 
-
+// Email And Tel Input Validation
 function telValidationCheck() {
 
     if (telInput.value.length < 10) {
@@ -109,7 +112,7 @@ function telValidationCheck() {
 telInput.addEventListener('blur', telValidationCheck)
 
 function emailValidationCheck() {
-    if (emailInput.value != ''){
+    if (emailInput.value != '') {
         emailInput.style.border = '1px solid green'
     } else {
         emailInput.style.border = '1px solid red'
@@ -117,16 +120,19 @@ function emailValidationCheck() {
 }
 emailInput.addEventListener('blur', emailValidationCheck)
 
+
+// form Validation Check
 function formValidationCheck(event) {
     event.preventDefault();
 
     if (permiumName === undefined) {
         formEror.style.display = 'block'
         formErorMessage.innerHTML = 'شما هنوز پلن خود را انتخاب نکرده اید'
-        
+
     } else if (months.value === 'default') {
         formEror.style.display = 'block'
         formErorMessage.innerHTML = `تعداد ماه ${permiumName} خود را انتخاب کنید`
+        selectedMonthsCheck()
     } else if (emailInput.value === '') {
         formEror.style.display = 'block'
         formErorMessage.innerHTML = 'لطفا آدرس ایمیل را به درستی وارد کنید'
@@ -137,9 +143,9 @@ function formValidationCheck(event) {
         formErorMessage.innerHTML = 'شماره تلفن همراه باید 11 رقم باشد. مثال: 09308586985'
         telValidationCheck()
     } else {
-            formEror.style.display = 'block'
-            formErorMessage.innerHTML = 'درحال انتقال به درگاه پرداخت...'
-            formErorMessage.style.backgroundColor = 'green'
+        formEror.style.display = 'block'
+        formErorMessage.innerHTML = 'درحال انتقال به درگاه پرداخت...'
+        formErorMessage.style.backgroundColor = 'green'
     }
 }
 
