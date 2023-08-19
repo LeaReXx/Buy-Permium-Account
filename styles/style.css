@@ -365,13 +365,13 @@ a {
     font-weight: 400;
 }
 
-#form-eror {
+#form-error {
     grid-column: 1/6;
     grid-row: 6/7;
     display: none;
 }
 
-#form-eror-message {
+#form-error-message {
     font-size: 16px;
     font-weight: 400;
     background-color: rgba(247, 36, 21, 0.829);
